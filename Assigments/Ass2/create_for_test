@@ -1,0 +1,5 @@
+tar -cvf cell_distances.tar cell_distances.c
+
+gzip cell_distances.tar
+
+/home/hpc2023/cell_distances/check_submission.jl cell_distances.tar.gz

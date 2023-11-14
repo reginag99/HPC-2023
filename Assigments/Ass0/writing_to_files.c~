@@ -1,0 +1,71 @@
+//Implement two programs. One that
+
+    //opens a file for writing,
+    //writes a square matrix of size 10 with int entries (ix*jx in the
+    // ix-th row and jx-th column) to that file,
+    //closes the file.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(
+	int argc;
+	int *argv[];
+)
+{
+	int size = 10;
+	int vector[size];
+	int matrix[size][size];
+
+	for ( int ix = 0; ix<size; ++ix)
+	  for ( int jx = 0; jx<size; ++jx)
+	    matrix[ix][jx] = ix * jx;	
+
+	// File pointer.
+	FILE * new_file_pointer;
+	new_file_pointer = fopen("new_file.txt", "w");
+	
+	//Creates a new file named new_file.txt if it does not exist
+
+	if ( new_file_pointer == NULL ) {
+		printf("Error opening or creating file/n");
+		return -1;
+	}
+	//matrix = [];
+
+	for (int ix = 0; ix<size; ++ix)
+	  for (int jx = 0; jx<size; ++jx)
+	    fprintf(new_file_pointer, "%d/n", matrix[ix][jx]);
+
+
+	
+
+	//	for ( int jx = 0; jx < size; ++jx)
+	//		matrix[ix][jx] = 0;
+	//fprintf(new_file_pointer, "%d" , "matrix");
+	//printf("%d/n", "matrix");
+	//Adding the textstring Added Content using the pointer
+
+	fclose(new_file_pointer);
+	//closes the file using the pointer to the file
+
+	return 0;
+
+}
+
+
+
+
+//The other one
+
+    //reopens the file for reading,
+    //reads the matrix from the file,
+    //checks that the entry in the ix-th row and jx-th column equals 
+    //ix*jx.
+
+//How does your choice of memory allocation (contiguous vs. 
+//noncontiguous) impact the possibilties to write the matrix in text 
+//and binary format? 
+
+
+

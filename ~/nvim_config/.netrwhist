@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/raum/run-hycu/results/q101g1'
+let g:netrw_dirhist_2='/home/hpc2018private/a3_grading'
+let g:netrw_dirhist_3='/home/hpc2018private/a3_grading/distances'
+let g:netrw_dirhist_4='/home/raum/local-hurwitz/src/hurwitznumbers/.git'
+let g:netrw_dirhist_5='/home/raum'
